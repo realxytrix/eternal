@@ -78,7 +78,7 @@ local all_bones_r15 = {
 
 -- check if window already exists
 if not _G.eternal_window then
-    _G.eternal_window = ui:Window({Name = "eternal | @kitodoescode"})
+    _G.eternal_window = ui:Window({Name = "eternal | @kitodoescode | " .. date})
 end
 local window = _G.eternal_window
 do
@@ -99,6 +99,7 @@ do
             if curr - last >= 1 then
                 date = os.date("%d-%m-%y")
                 watermark.Title = "eternal | @kitodoescode | " .. date
+                window.Name = "eternal | @kitodoescode | " .. date
             end
         end
     )
